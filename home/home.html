@@ -1,0 +1,3 @@
+<h1 align="center">Great Chat App</h1>
+<a ng-if="!$ctrl.session.login" href="#!/login" class="btn btn-success" style="margin: auto;display: block;width: 70px;">Login</a>
+<h2 align="center" ng-if="$ctrl.session.login">Welcome, {{$ctrl.session.userData.name}}</h2>

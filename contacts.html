@@ -1,0 +1,38 @@
+<div class="row">
+        <div class="col-md-6">
+            <h2>Seach Contact</h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Buscar" ng-model="contactName" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="contacts table" aria-labelledby="contacts-caption-text">
+  <div class="contacts-header thead">
+    <span class="th" id="th-name">Name:</span>
+    <span class="th" id="th-phone">Phone:</span>
+    <span class="th" id="th-email">Email:</span>
+  </div>
+  <ul class="tbody">
+    <li class="tr" itemscope itemtype="http://schema.org/Person" ng-repeat="contact in contacts | filter: contactName" style="cursor: pointer" ng-click="startChat('/chatArea/'+contact.name)">
+      <span class="td">
+        <span class="label">Name:</span>
+        <span class="data" itemprop="name" aria-labelledby="th-name">{{contact.name | uppercase}}</span>
+      </span>
+      <span class="td">
+        <span class="label">Phone:</span>
+        <span class="data" itemprop="telephone" aria-labelledby="th-phone">{{contact.phone}}</span>
+      </span>
+      <span class="td">
+        <span class="label">Email:</span>
+        <span class="data" itemprop="email" aria-labelledby="th-email"><a href="{{contact.email}}">Email</a></span>
+      </span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.min.js"></script>
+</head>
+
+<body ng-app="chatApp" ng-controller="baseController as base">
+  <div ng-include="'header.html'"></div>
+  <div class="container-fluid">
+    <div ng-view></div>
+  </div>
+  <script src="mainApp.js"></script>
+  <script src="config.js"></script>
+  <script src="auth.js"></script>
+  <script src="baseController.js"></script>
+  <script src="contactsController.js"></script>
+  <script src="chatAreaController.js"></script>
+  <script src="registerController.js"></script>
+  <script src="factories.js"></script>
+  <script src="services.js"></script>
+  <script src="directives/message.js"></script>
+  <script src="home/home.component.js"></script>
+  <script src="components/logout/logout.component.js"></script>
+  <script src="login/login.controller.js"></script>
+</body>
+
+</html>

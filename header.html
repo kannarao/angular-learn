@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/" ng-if="!session.login">Chat</a>
+      <a class="navbar-brand" href="#!/" ng-if="session.login">Hi, {{session.userData.name}}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-if="session.login">
+      <ul class="nav navbar-nav pull-right">
+        <li class="aactive"><a href="#!/contacts">Contacts</a></li>
+        <!--<li><a href="#!/chatArea">Chat Area</a></li>-->
+        <li><logout></logout></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
